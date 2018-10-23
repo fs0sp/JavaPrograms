@@ -6,40 +6,22 @@ class Demo {
     public static void main(String args[]) {
 
         int a,b;
-
+        char operator;
         Scanner scan = new Scanner(System.in);
 
         a = scan.nextInt();
         b = scan.nextInt();
+        operator = scan.next().charAt(0);
 
-        try{
-            
+        try {
 
-            if(b == 0) {
-                throw new BisZeroExecption();
-            }
-
-            else {
-                System.out.println(" Value is : " + a/b);
-            }
+            if( operator == '+' || operator == '-' || operator == '*' || operator == '/')
 
         }
-
-        catch(BisZeroExecption e1) {
-            System.out.println(e1);
-        }
-
 
 
     }
 
-}
 
-class BisZeroExecption extends Exception
-{
-    public String toString()
-    {
-        return("Value of B can't be zero");
-    }
 }
     
